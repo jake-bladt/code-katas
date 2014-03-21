@@ -52,3 +52,11 @@ div.reading1k {
 div.reading0k {
 	background-color:#000;
 }
+
+div.yearContainer {
+	width:154px;
+}
+
+.yearTitle {
+	text-align: center;
+}
