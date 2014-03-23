@@ -62,3 +62,9 @@ div.yearContainer {
 .yearTitle {
 	text-align: center;
 }
+
+div.formContainer {
+	width:600px;
+	float:left;
+	padding-right:25px;
+}
