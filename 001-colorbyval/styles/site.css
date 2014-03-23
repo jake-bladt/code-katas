@@ -1,6 +1,6 @@
 div.dailyReading {
 	width:20px;
-	height:20px;
+	height:15px;
 	border:1px solid #fff;
 	float:left;
 }
@@ -55,6 +55,7 @@ div.reading0k {
 
 div.yearContainer {
 	width:154px;
+	float:left;
 }
 
 .yearTitle {
