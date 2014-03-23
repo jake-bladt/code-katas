@@ -24,15 +24,19 @@ siteCode.getDisplayClass = function(stepCount) {
 };
 
 siteCode.setReadingValues = function() {
-	var parent = document.getElementById('year2014');
+	var parent2014 = document.getElementById('year2014');
+	var parent2013 = document.getElementById('year2013');
+
 	for(var i = 0; i < 364; i++) {
-		var id = 'data' + i;
-		var newDiv = document.createElement('div');
-		newDiv.setAttribute('id', id);
-		var steps = Math.floor(Math.random() * 15000);
-		var displayClass = 'dailyReading ' + siteCode.getDisplayClass(steps);
-		newDiv.setAttribute('class', displayClass);
-		parent.appendChild(newDiv);
+		[parent2013, parent2014].map(function(parent) {
+			var id = 'data' + i;
+			var newDiv = document.createElement('div');
+			newDiv.setAttribute('id', id);
+			var steps = Math.floor(Math.random() * 15000);
+			var displayClass = 'dailyReading ' + siteCode.getDisplayClass(steps);
+			newDiv.setAttribute('class', displayClass);
+			parent.appendChild(newDiv);
+		});
 	};
 };
 
