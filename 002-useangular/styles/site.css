@@ -1,0 +1,70 @@
+div.dailyReading {
+	width:20px;
+	height:15px;
+	border:1px solid #fff;
+	float:left;
+}
+
+div.readingNoData {
+	background-color:#aaa;
+}
+
+div.reading10k {
+	background-color:#f00;
+}
+
+div.reading9k {
+	background-color:#f55;
+}
+
+div.reading8k {
+	background-color:#f88;
+}
+
+div.reading7k {
+	background-color:#faa;
+}
+
+div.reading6k {
+	background-color:#f8a4e5;
+}
+
+div.reading5k {
+	background-color:#808;
+}
+
+div.reading4k {
+	background-color:#e7a4f8;
+}
+
+div.reading3k {
+	background-color:#aaf;
+}
+
+div.reading2k {
+	background-color:#55f;
+}
+
+div.reading1k {
+	background-color:#00f;
+}
+
+div.reading0k {
+	background-color:#000;
+}
+
+div.yearContainer {
+	width:154px;
+	float:left;
+	padding-right:15px;
+}
+
+.yearTitle {
+	text-align: center;
+}
+
+div.formContainer {
+	width:600px;
+	float:left;
+	padding-right:25px;
+}
