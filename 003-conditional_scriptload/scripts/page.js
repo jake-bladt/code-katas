@@ -1,5 +1,11 @@
 var pageCode = function(){};
 
+pageCode.loadEasy = function() {
+  var resultElem = document.getElementById('loadResult');
+  resultElem.innerText = 'Script loaded.';
+  return false;
+};
+
 pageCode.loadScript = function() {
   if(typeof siteCode == null) {
     var elem = document.createElement('script');
