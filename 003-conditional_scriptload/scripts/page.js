@@ -7,7 +7,7 @@ pageCode.loadEasy = function() {
 };
 
 pageCode.loadScript = function() {
-  if(typeof siteCode == null) {
+  if(typeof siteCode == 'undefined') {
     var elem = document.createElement('script');
     elem.src = 'scripts/site.js';
     elem.type = 'text/javascript';
