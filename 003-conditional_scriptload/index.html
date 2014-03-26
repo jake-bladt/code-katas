@@ -2,10 +2,20 @@
 <html>
   <head>
     <title>Conditional script loading</title>
+    <script type='text/javascript'>
+      var pageCode = function(){};
+      pageCode.loadScript = function() {
+        alert('Clicked!'); 
+        return false;
+      };
+
+    </script>
   </head>
   <body>
     <form action="index.html" method="post">
-      <button type="button">Add Script</button>
+      <button type="button" onclick="pageCode.loadScript()" }>
+        Add Script
+      </button>
     </form>
     <span id="loadResult"></span>
   </body>
