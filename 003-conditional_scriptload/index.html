@@ -2,19 +2,7 @@
 <html>
   <head>
     <title>Conditional script loading</title>
-    <script type='text/javascript'>
-      var pageCode = function(){};
-      pageCode.loadScript = function() {
-        if(typeof siteCode == null) {
-          var elem = document.createElement('script');
-          elem.src = 'scripts/site.js';
-          elem.type = 'text/javascript';
-          document.getElementsByTagName("head")[0].appendChild(elem);
-        };
-        return false;
-      };
-
-    </script>
+    <script src='scripts/page.js'></script>
   </head>
   <body>
     <form action="index.html" method="post">
@@ -22,6 +10,6 @@
         Add Script
       </button>
     </form>
-    <span id="loadResult"></span>
+    <span id='loadResult'></span>
   </body>
 </html>
