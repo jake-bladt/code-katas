@@ -12,3 +12,9 @@ Pulser.prototype.start = function() {
     util.log('<<<< pulse');
   }, 1000);
 }
+
+var pulser = new Pulser();
+pulser.on('pulse', function() {
+  util.log('pulse received');
+});
+pulser.start();
