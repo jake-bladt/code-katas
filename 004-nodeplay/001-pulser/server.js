@@ -55,5 +55,5 @@ server.on('request', function(req, res) {
         res.end("bad URL "+ req.url);
     }
 });
-server.listen(8124);
-console.log('listening to http://localhost:8124');
+server.listen(8888);
+console.log('listening to http://localhost:8888');
