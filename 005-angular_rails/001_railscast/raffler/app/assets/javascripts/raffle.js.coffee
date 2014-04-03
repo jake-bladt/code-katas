@@ -1,3 +1,5 @@
+app = angular.module("Raffler", ["ngResource"])
+
 @RaffleCtrl = ($scope) -> 
   $scope.entries = [
     {name: "Manny"}
