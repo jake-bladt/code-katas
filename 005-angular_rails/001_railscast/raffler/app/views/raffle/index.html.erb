@@ -1,5 +1,14 @@
 <h1>Raffler</h1>
+
+<div data-ng-controller='RaffleCtrl'>
 <form>
   <input type="text" data-ng-model="newEntry.name"/>
 </form>
-{{newEntry.name}}
+
+<ul>
+  <li data-ng-repeat="entry in entries">
+  	{{entry.name}}
+  </li>
+</ul>
+
+</div>
