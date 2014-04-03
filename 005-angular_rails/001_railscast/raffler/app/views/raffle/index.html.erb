@@ -1,8 +1,9 @@
 <h1>Raffler</h1>
 
 <div data-ng-controller='RaffleCtrl'>
-<form>
+<form data-ng-submit="addEntry()">
   <input type="text" data-ng-model="newEntry.name"/>
+  <input type="submit" value="Add"/>
 </form>
 
 <ul>
