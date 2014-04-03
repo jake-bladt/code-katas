@@ -9,7 +9,9 @@
   <ul>
     <li data-ng-repeat="entry in entries">
   	  {{entry.name}}
-  	  <span data-ng-show="entry.winner" class="winner">WINNER</span>
+  	  <span data-ng-show="entry.winner" class="winner" data-ng-class="{highlight: entry == lastWinner}">
+  	  WINNER
+  	  </span>
     </li>
   </ul>
 
