@@ -1,2 +1,20 @@
-<h1>Raffle#index</h1>
-<p>Find me in app/views/raffle/index.html.erb</p>
+<h1>Raffler</h1>
+
+<div data-ng-controller='RaffleCtrl'>
+  <form data-ng-submit="addEntry()">
+    <input type="text" data-ng-model="newEntry.name"/>
+    <input type="submit" value="Add"/>
+  </form>
+
+  <ul>
+    <li data-ng-repeat="entry in entries">
+  	  {{entry.name}}
+  	  <span data-ng-show="entry.winner" class="winner" data-ng-class="{highlight: entry == lastWinner}">
+  	  WINNER
+  	  </span>
+    </li>
+  </ul>
+
+  <button data-ng-click="drawWinner()">Draw Winner</button>
+
+</div>
