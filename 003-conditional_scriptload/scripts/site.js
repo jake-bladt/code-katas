@@ -1,4 +1,6 @@
 var siteCode = function() {};
 
-var resultElem = document.getElementById('loadResult');
-resultElem.innerText = 'Script loaded.';
+(function(siteCode, document) {
+  siteCode.resultElem = document.getElementById('loadResult');
+  siteCode.resultElem.innerText = 'Script loaded.';
+})(siteCode, document);
