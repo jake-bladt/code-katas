@@ -42,4 +42,26 @@ describe "Static pages" do
     it_should_behave_like "all static pages"
     it { should have_content('jake@jakebladt.com') }
   end
+
+it "should have the right links on the layout" do
+    visit root_path
+
+    click_link "About"
+    expect(page).to have_title(title_prefix + ' | About Us')
+
+    click_link "Help"
+    expect(page).to have_title(title_prefix + ' | Help')
+
+    click_link "Contact"
+    expect(page).to  have_title(title_prefix + ' | Contact Us')
+
+    click_link "Home"
+    expect(page).to  have_title(title_prefix)
+
+    click_link "Sign up now!"
+    expect(page).to  have_title(title_prefix + ' | Sign Up')
+
+    click_link "sample app"
+    expect(page).to  have_title(title_prefix)
+  end
 end

@@ -7,6 +7,6 @@ describe "User pages" do
   describe "signup page" do
     before { visit signup_path }
     it { should have_selector('h1','Sign up') }
-    it { should have_title(title_prefix + ' | Sign up') }
+    it { should have_title(title_prefix + ' | Sign Up') }
   end
 end
