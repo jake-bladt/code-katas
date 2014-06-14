@@ -1,11 +1,13 @@
 class StepsController < ApplicationController
   def index
+    @readings = StepsReading.all
   end
 
   def create
   end
 
   def new
+    @reading = StepsReading.new
   end
 
   def edit
