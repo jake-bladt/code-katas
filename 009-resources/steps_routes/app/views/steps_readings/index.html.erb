@@ -1,0 +1,8 @@
+<h1>Steps#index</h1>
+<p><%= @readings.count %> day(s) metered.</p>
+<ul>
+<% @readings.each do |r| %>
+  <li><%= r.day %>: <%= r.steps %></li>
+<% end %>
+</ul>
+<p><%= link_to "Add day", new_steps_reading_path %></p>

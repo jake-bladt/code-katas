@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'steps#index'
-  resources :steps
+  root to: 'steps_readings#index'
+  resources :steps_readings, path: :steps
 end

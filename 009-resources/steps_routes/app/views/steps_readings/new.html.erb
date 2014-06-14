@@ -1,0 +1,10 @@
+<h1>Steps#new</h1>
+<%= form_for @reading do |f| %>
+  <%= label_tag :day, "Date:" %>
+  <%= f.text_field :day %>
+  <br/>
+  <%= label_tag :steps, "Steps:" %>
+  <%= f.text_field :steps %>
+  <br/>
+  <%= submit_tag "Save" %>
+<% end %>
