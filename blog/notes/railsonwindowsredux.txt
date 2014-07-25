@@ -1,0 +1,3 @@
+vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
+
+If your CPU does not have virtualization extensions, it probably won't be able to handle 64-bit VMs, so stick to 32-bit where possible. 
