@@ -1,0 +1,4 @@
+Contest Manager
+===============
+To share a folder on a Vagrant box, use:
+  config.vm.share_folder("logical_name", "guest/path", "C:\host\path")
