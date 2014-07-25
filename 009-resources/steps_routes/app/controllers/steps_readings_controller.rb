@@ -6,7 +6,6 @@ class StepsReadingsController < ApplicationController
   def create
     @reading = StepsReading.new(reading_params)
     if(@reading.save)
-      flash[:success] = "Reading saved"
       redirect_to root_url
     else
       render 'new'
