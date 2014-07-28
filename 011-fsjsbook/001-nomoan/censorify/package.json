@@ -1,0 +1,11 @@
+{
+  "author":       "Jake Bladt",
+  "name":         "censorify",
+  "version":      "0.1.1",
+  "description":  "censors words out of text",
+  "main":         "censortext",
+  "dependencies": {},
+  "engines": {
+  	"node": "*"
+  }
+}
