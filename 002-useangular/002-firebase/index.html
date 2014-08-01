@@ -1,12 +1,15 @@
 <!doctype html>
-<html>
+<html ng-app="wakerApp">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>  
     <script src="https://cdn.firebase.com/js/simple-login/1.6.1/firebase-simple-login.js"></script>
+    <script src="walker.js"></script>
   </head>
   <body>
-
+    <div ng-controller="AuthenticationController">
+       User: {{user}}
+    </div>
   </body>
 </html>
