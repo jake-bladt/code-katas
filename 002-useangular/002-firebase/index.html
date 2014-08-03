@@ -20,5 +20,15 @@
         <button ng-click="createUser()">Register</button>
       </p> 
     </div>
+    <div ng-controller="ReadingsController">
+      <h3>Add reading</h3>
+      <p>
+       Date:
+       <input type="text" ng-model="readingDate"/><br/>
+       Step Count
+       <input type="text" ng-model="stepsCount"/><br/>
+       <button ng-click="addReading()">Add</button>
+      </p>
+    </div>
   </body>
 </html>

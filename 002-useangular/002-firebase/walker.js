@@ -12,11 +12,16 @@ app.controller('AuthenticationController', function($scope) {
     if(error) {
       $scope.authError = error;
       app.loggedInUser = null;
-      $scope.currentUser = "guest";
+      $scope.$apply(function() {
+        $scope.currentUser = "guest";
+        $scope.authError = error;
+      });
     } else if(user) {
       $scope.currentUser = user.email;
-      app.loggedInUser = user;
-      $scope.authError = null;
+      $scope.$apply(function() {
+        app.loggedInUser = user;
+        $scope.authError = null;
+      });
       app.userHive = app.getUserHive(user);
       if( app.isNewUser ) {
       	app.userHive.set({
@@ -46,4 +51,22 @@ app.controller('AuthenticationController', function($scope) {
     });
   };
 
+});
+
+app.controller('ReadingsController', function($scope) {
+  $scope.readingDate = '20120101';
+  $scope.stepsCount = '7415';
+
+  $scope.addReading = function() {
+    if(app.userHive) {
+      steps_data = app.userHive.child('steps_data');
+      steps_data.push({
+        readingDate: $scope.readingDate,
+        stepsCount:  $scope.stepsCount
+      });    	
+
+      $scope.readingDate = '';
+      $scope.stepsCount = '';
+    }
+  }
 });
