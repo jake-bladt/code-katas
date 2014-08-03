@@ -52,3 +52,21 @@ app.controller('AuthenticationController', function($scope) {
   };
 
 });
+
+app.controller('ReadingsController', function($scope) {
+  $scope.readingDate = '20120101';
+  $scope.stepsCount = '7415';
+
+  $scope.addReading = function() {
+    if(app.userHive) {
+      steps_data = app.userHive.child('steps_data');
+      steps_data.push({
+        readingDate: $scope.readingDate,
+        stepsCount:  $scope.stepsCount
+      });    	
+
+      $scope.readingDate = '';
+      $scope.stepsCount = '';
+    }
+  }
+});
