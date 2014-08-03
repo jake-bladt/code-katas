@@ -17,9 +17,9 @@ app.controller('AuthenticationController', function($scope) {
         $scope.authError = error;
       });
     } else if(user) {
-      $scope.currentUser = user.email;
+      app.loggedInUser = user;
       $scope.$apply(function() {
-        app.loggedInUser = user;
+      	$scope.currentUser = user.email;
         $scope.authError = null;
       });
       app.userHive = app.getUserHive(user);
