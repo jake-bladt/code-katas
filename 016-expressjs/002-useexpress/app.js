@@ -12,23 +12,28 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-        res.render('home');
+  var agents = [
+    'Runt', 'Aslan', 'Sneaky Furfoot', 'Caboodle', 'Seamus', 'Angus', 'Blemange', 'Princess'
+  ];
+  var randomAgent = agents[Math.floor(Math.random() * agents.length)];
+  res.render('home', { agent: randomAgent });
 });
+
 app.get('/about', function(req, res) {
-        res.render('about');
+  res.render('about');
 });
 
 // 404 catch-all handler (middleware)
 app.use(function(req, res, next){
-        res.status(404);
-        res.render('404');
+  res.status(404);
+  res.render('404');
 });
 
 // 500 error handler (middleware)
 app.use(function(err, req, res, next){
-        console.error(err.stack);
-        res.status(500);
-        res.render('500');
+  console.error(err.stack);
+  res.status(500);
+  res.render('500');
 });
 
 app.listen(app.get('port'), function(){
