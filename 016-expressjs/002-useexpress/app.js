@@ -1,4 +1,5 @@
 var express = require('express');
+var agent = require('./lib/agent.js');
 
 var app = express();
 
@@ -12,11 +13,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-  var agents = [
-    'Runt', 'Aslan', 'Sneaky Furfoot', 'Caboodle', 'Seamus', 'Angus', 'Blemange', 'Princess'
-  ];
-  var randomAgent = agents[Math.floor(Math.random() * agents.length)];
-  res.render('home', { agent: randomAgent });
+  res.render('home', { agent: agent.getAgent() });
 });
 
 app.get('/about', function(req, res) {
