@@ -10,6 +10,11 @@ app.set('view engine', 'handlebars');
 
 app.set('port', process.env.PORT || 3000);
 
+app.use(function(req, res, next){
+  res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
+  next();
+});
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
@@ -17,7 +22,9 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about', function(req, res) {
-  res.render('about');
+  res.render('about', {
+    pageTestScript: '/qa/about-tests.js'
+  });
 });
 
 // 404 catch-all handler (middleware)
