@@ -16,7 +16,7 @@ body {
   clear: left;
 }
 
-.dragging {
+.card-dragging {
   color: red;
   border: 1px;
   border-style: solid;

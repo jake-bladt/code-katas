@@ -3,7 +3,7 @@ $(document).ready(function() {
     cursor: 'move',
     helper: function() {
       var $clone = $(this).clone();
-      $clone.addClass('dragging');
+      $clone.addClass('card-dragging');
       return $clone;
     }
   });
