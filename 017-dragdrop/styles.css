@@ -12,6 +12,11 @@ body {
   padding: 10px;
 }
 
+.card-last
+{
+  clear: right;
+}
+
 .letter-card {
   background-color: white;
   color: navy;
