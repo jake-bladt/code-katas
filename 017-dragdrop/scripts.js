@@ -6,10 +6,10 @@ $(document).ready(function() {
       $clone.addClass('card-dragging');
       return $clone;
     },
-    start: function() {
+    start: function(event, ui) {
       $(this).addClass('card-drained');
     },
-    stop: function() {
+    stop: function(event, ui) {
       $(this).removeClass('card-drained');
     }
   });

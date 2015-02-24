@@ -17,7 +17,7 @@ body {
 }
 
 .card-dragging {
-  color: red;
+  color: blue;
   border: 1px;
   border-style: solid;
   border-color: black;
