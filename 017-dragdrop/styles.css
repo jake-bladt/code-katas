@@ -18,6 +18,9 @@ body {
 
 .dragging {
   color: red;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
 }
 
 .letter-card {
