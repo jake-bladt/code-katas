@@ -1,0 +1,49 @@
+body {
+  background-color: lightgrey;
+}
+
+.number-card {
+  background-color: white;
+  color: black;
+  font-size: 120pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
+
+.card-first {
+  clear: left;
+}
+
+.card-dragging {
+  color: blue;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+.card-drained {
+  color: lightgrey;
+}
+
+.letter-card {
+  background-color: white;
+  color: navy;
+  font-size: 180pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  float: left;
+  padding: 30px;
+}
+
+.scoreboard {
+  float: left;
+  margin: 10px;
+  margin-left: 90px;
+}
+
+.score-chyron {
+  text-align: center;
+  font-size: 24pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
