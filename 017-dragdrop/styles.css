@@ -33,11 +33,11 @@ body {
   font-size: 180pt;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   float: left;
-  margin: 10px;
   padding: 30px;
-  margin-left: 90px;
 }
 
 .scoreboard {
   float: left;
+  margin: 10px;
+  margin-left: 90px;
 }
