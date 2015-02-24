@@ -12,9 +12,9 @@ body {
   padding: 10px;
 }
 
-.card-last
+.card-first
 {
-  clear: right;
+  clear: left;
 }
 
 .letter-card {
