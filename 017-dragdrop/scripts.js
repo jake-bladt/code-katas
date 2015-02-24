@@ -2,7 +2,9 @@ $(document).ready(function() {
   $('.number-card').draggable({
     cursor: 'move',
     helper: function() {
-      return $(this).clone();
+      var $clone = $(this).clone();
+      $clone.addClass('dragging');
+      return $clone;
     }
   });
 });

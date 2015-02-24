@@ -12,9 +12,12 @@ body {
   padding: 10px;
 }
 
-.card-first
-{
+.card-first {
   clear: left;
+}
+
+.dragging {
+  color: red;
 }
 
 .letter-card {
