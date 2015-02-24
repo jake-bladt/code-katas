@@ -1,3 +1,5 @@
 $(document).ready(function() {
-  $('.number-card').draggable();
+  $('.number-card').draggable({
+    cursor: 'move'
+  });
 });
