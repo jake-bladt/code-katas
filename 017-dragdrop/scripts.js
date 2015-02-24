@@ -13,4 +13,12 @@ $(document).ready(function() {
       $(this).removeClass('card-drained');
     }
   });
+
+  $('.letter-card').droppable({
+    drop: function(event, ui) {
+      var $dropped = ui.draggable;
+      var val = $dropped.attr('data-numeric-value');
+      alert('Value is ' + val);
+    }
+  });
 });
