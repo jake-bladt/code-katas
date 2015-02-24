@@ -17,13 +17,13 @@ $(document).ready(function() {
   $('.letter-card').droppable({
     drop: function(event, ui) {
       var $dropped = ui.draggable;
-      var newVal = $dropped.attr('data-numeric-value');
+      var newVal = Number($dropped.attr('data-numeric-value'));
 
-      var $chyron = $dropped.siblings('.score-chyron');
-      var $scoreElement = $chyron.find('score-number');
-      var score = $scoreElement.innerHtml();
-
-      alert('Value is ' + score);
+      var $chyron = $(this).siblings('.score-chyron');
+      var $scoreElement = $chyron.find('.score-number');
+      var oldScore = Number($scoreElement.text());
+      var newScore = newVal + oldScore;
+      $scoreElement.text(newScore);
     }
   });
 });
