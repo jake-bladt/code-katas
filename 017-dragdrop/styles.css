@@ -23,6 +23,10 @@ body {
   border-color: black;
 }
 
+.card-drained {
+  color: lightgrey;
+}
+
 .letter-card {
   background-color: white;
   color: navy;
