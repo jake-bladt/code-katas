@@ -5,6 +5,20 @@ body {
 .number-card {
   background-color: white;
   color: black;
-  font-size: 60pt;
+  font-size: 120pt;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
+
+.letter-card {
+  background-color: white;
+  color: navy;
+  font-size: 180pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  padding-left: 90px;
 }
