@@ -44,4 +44,6 @@ body {
 
 .score-chyron {
   text-align: center;
+  font-size: 24pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

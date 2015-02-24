@@ -17,8 +17,13 @@ $(document).ready(function() {
   $('.letter-card').droppable({
     drop: function(event, ui) {
       var $dropped = ui.draggable;
-      var val = $dropped.attr('data-numeric-value');
-      alert('Value is ' + val);
+      var newVal = $dropped.attr('data-numeric-value');
+
+      var $chyron = $dropped.siblings('.score-chyron');
+      var $scoreElement = $chyron.find('score-number');
+      var score = $scoreElement.innerHtml();
+
+      alert('Value is ' + score);
     }
   });
 });
