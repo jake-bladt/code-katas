@@ -1,6 +1,6 @@
 const app = {
   process: (operations, ...subjects) => {
-    const ret = operations.reduce(
+    let ret = operations.reduce(
       (c, o) => {
         c[o.title] = subjects.map((s) => o.operation(s));
         return c;
