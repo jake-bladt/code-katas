@@ -1,9 +1,14 @@
 const app = {
   process: (operations, ...subjects) => {
-    const ret = operations.map((o) => o.title);
+    const ret = operations.reduce(
+      (c, o) => {
+        c[o.title] = subjects.map(
+        (s) => o.operation(s));
+      },
+    {});
     return ret;
   }
-}
+};
 
 const ops = [
   { title: 'add kitten love', operation: (s) => `${s} loves kittens.` },
