@@ -10,4 +10,5 @@ const ops = [
   { title: 'apply kitten love', operation: (s) => `{s} is loved by kittens.` }
 ];
 
-
+var artifacts = app.process(ops, 'Jake', 'Tom', 'Tomasz');
+console.log(artifacts);
